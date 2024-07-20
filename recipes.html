@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Recipes</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="#" id="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>All Recipes</h2>
+            <div>
+                <label for="filter-type">Filter by type:</label>
+                <select id="filter-type">
+                    <option value="all">All</option>
+                    <option value="veg">Veg</option>
+                    <option value="non-veg">Non-Veg</option>
+                </select>
+            </div>
+            <div>
+                <label for="search-name">Search by name:</label>
+                <input type="text" id="search-name" placeholder="Enter recipe name">
+            </div>
+        </section>
+        <section id="recipe-list">
+            <!-- Recipe items will be dynamically inserted here using JavaScript -->
+        </section>
+        <section>
+            <h2>Add New Recipe</h2>
+            <form id="add-recipe-form">
+                <div>
+                    <label for="recipe-name">Recipe Name:</label>
+                    <input type="text" id="recipe-name" name="recipe-name" required>
+                </div>
+                <div>
+                    <label for="recipe-type">Type:</label>
+                    <select id="recipe-type" name="recipe-type" required>
+                        <option value="veg">Veg</option>
+                        <option value="non-veg">Non-Veg</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="recipe-ingredients">Ingredients (comma separated):</label>
+                    <input type="text" id="recipe-ingredients" name="recipe-ingredients" required>
+                </div>
+                <div>
+                    <label for="recipe-instructions">Instructions:</label>
+                    <textarea id="recipe-instructions" name="recipe-instructions" rows="4" required></textarea>
+                </div>
+                <div>
+                    <label for="recipe-image">Image URL:</label>
+                    <input type="text" id="recipe-image" name="recipe-image" required>
+                </div>
+                <button type="submit">Add Recipe</button>
+            </form>
+        </section>
+        
+    </main>
+    <footer>
+        <p>&copy; 2024 Recipe Management</p>
+    </footer>
+    <script src="scripts/auth.js" type="module"></script>
+    <script src="scripts/recipes.js"></script>
+    <script src="scripts/scripts.js" type="module"></script>
+</body>
+</html>
